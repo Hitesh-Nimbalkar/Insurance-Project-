@@ -63,9 +63,12 @@ class DataIngestion:
                 test_file_path=self.data_ingestion_config.test_file_path)
 
             logging.info(f"Data ingestion artifact: {data_ingestion_artifact}")
-            return data_ingestion_artifact
 
             logging.info(f"{'>>'*20} Data Ingestion Artifact Exported {'<<'*20}")
+            logging.info(f"{'  '*20}                                  {'  '*20}")
+            return data_ingestion_artifact
+
+            
 
         except Exception as e:
             raise InsuranceException(error_message=e, error_detail=sys)
