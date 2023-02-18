@@ -11,6 +11,8 @@ Insurance_Project/predictor.py
 Insurance_Project/utils.py
 Insurance_Project/components/__init__.py
 Insurance_Project/components/data_ingestion.py
+Insurance_Project/components/data_transformation.py
+Insurance_Project/components/data_validation.py
 Insurance_Project/entity/__init__.py
 Insurance_Project/entity/artifact_entity.py
 Insurance_Project/entity/config_entity.py
