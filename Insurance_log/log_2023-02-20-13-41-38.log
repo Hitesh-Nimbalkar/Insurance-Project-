@@ -1,0 +1,41 @@
+[2023-02-20 13:41:39,456] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-02-20 13:41:39,456] root - INFO - Exporting collection data as pandas dataframe
+[2023-02-20 13:41:39,456] root - INFO - Reading data from database: INSURANCE and collection: INSURANCE_PROJECT
+[2023-02-20 13:41:39,470] root - INFO - Found columns: Index(['_id', 'age', 'sex', 'bmi', 'children', 'smoker', 'region', 'expenses'], dtype='object')
+[2023-02-20 13:41:39,470] root - INFO - Dropping column: _id 
+[2023-02-20 13:41:39,472] root - INFO - Row and columns in df: (1338, 7)
+[2023-02-20 13:41:39,472] root - INFO - Save data in feature store
+[2023-02-20 13:41:39,472] root - INFO - Create feature store folder if not available
+[2023-02-20 13:41:39,473] root - INFO - Save df to feature store folder
+[2023-02-20 13:41:39,480] root - INFO - split dataset into train and test set
+[2023-02-20 13:41:39,481] root - INFO - create dataset directory folder if not available
+[2023-02-20 13:41:39,481] root - INFO - Save df to feature store folder
+[2023-02-20 13:41:39,488] root - INFO - Data ingestion artifact: DataIngestionArtifact(feature_store_file_path='/config/workspace/artifact/02202023__134139/data_ingestion/feature_store/insurance.csv', train_file_path='/config/workspace/artifact/02202023__134139/data_ingestion/dataset/train.csv', test_file_path='/config/workspace/artifact/02202023__134139/data_ingestion/dataset/test.csv')
+[2023-02-20 13:41:39,489] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion Artifact Exported <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-02-20 13:41:39,489] root - INFO -                                                                                                                   
+[2023-02-20 13:41:39,489] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-02-20 13:41:39,489] root - INFO - Reading base dataframe
+[2023-02-20 13:41:39,494] root - INFO - Replace na value in base df
+[2023-02-20 13:41:39,494] root - INFO - Drop null values colums from base df
+[2023-02-20 13:41:39,496] root - INFO - selecting column name which contains null above to 0.2
+[2023-02-20 13:41:39,496] root - INFO - Columns to drop: []
+[2023-02-20 13:41:39,497] root - INFO - Reading train dataframe
+[2023-02-20 13:41:39,500] root - INFO - Reading test dataframe
+[2023-02-20 13:41:39,503] root - INFO - selecting column name which contains null above to 0.2
+[2023-02-20 13:41:39,504] root - INFO - Columns to drop: []
+[2023-02-20 13:41:39,505] root - INFO - selecting column name which contains null above to 0.2
+[2023-02-20 13:41:39,505] root - INFO - Columns to drop: []
+[2023-02-20 13:41:39,509] root - INFO - Is all required columns present in train df
+[2023-02-20 13:41:39,510] root - INFO - Is all required columns present in test df
+[2023-02-20 13:41:39,510] root - INFO - As all column are available in train df hence detecting data drift
+[2023-02-20 13:41:39,521] root - INFO - As all column are available in test df hence detecting data drift
+[2023-02-20 13:41:39,529] root - INFO - Write reprt in yaml file
+[2023-02-20 13:41:39,534] root - INFO - Data validation artifact: DataValidationArtifact(report_file_path='/config/workspace/artifact/02202023__134139/data_validation/report.yaml')
+[2023-02-20 13:41:39,534] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation Artifact Exported <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-02-20 13:41:39,534] root - INFO -                                                                                                                    
+[2023-02-20 13:41:39,534] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Transformation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-02-20 13:41:39,554] root - INFO - Entered the save_object method of utils
+[2023-02-20 13:41:39,556] root - INFO - Exited the save_object method of utils
+[2023-02-20 13:41:39,556] root - INFO - Entered the save_object method of utils
+[2023-02-20 13:41:39,556] root - INFO - Exited the save_object method of utils
+[2023-02-20 13:41:39,556] root - INFO - Data transformation object DataTransformationArtifact(transform_object_path='/config/workspace/artifact/02202023__134139/data_transformation/transformer/transformer.pkl', transformed_train_path='/config/workspace/artifact/02202023__134139/data_transformation/transformed/train.npz', transformed_test_path='/config/workspace/artifact/02202023__134139/data_transformation/transformed/test.npz', target_encoder_path='/config/workspace/artifact/02202023__134139/data_transformation/target_encoder/target_encoder.pkl')
