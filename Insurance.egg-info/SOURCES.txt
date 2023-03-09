@@ -13,8 +13,10 @@ Insurance_Project/components/__init__.py
 Insurance_Project/components/data_ingestion.py
 Insurance_Project/components/data_transformation.py
 Insurance_Project/components/data_validation.py
+Insurance_Project/components/model_trainer.py
 Insurance_Project/entity/__init__.py
 Insurance_Project/entity/artifact_entity.py
 Insurance_Project/entity/config_entity.py
 Insurance_Project/logger/__init__.py
 Insurance_Project/pipeline/__init__.py
+Insurance_Project/pipeline/training_pipeline.py
