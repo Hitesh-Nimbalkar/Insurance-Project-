@@ -1,3 +1,4 @@
+
 import os,sys
 from Insurance_Project.exception import InsuranceException
 from Insurance_Project.logger import logging
@@ -34,11 +35,13 @@ class DataIngestionConfig:
         except Exception  as e:
             raise InsuranceException(e,sys)      
 
+            
+# Convert data into dict
     def to_dict(self,)->dict:
         try:
             return self.__dict__
         except Exception  as e:
-            raise InsuranceException(e,sys)
+            raise InsuranceException(e,sys)          
 
 class DataValidationConfig:
     
@@ -66,3 +69,19 @@ class ModelTrainerConfig:
         self.model_path = os.path.join(self.model_trainer_dir,"model",MODEL_FILE_NAME)
         self.expected_score = 0.7
         self.overfitting_threshold = 0.3 # overfiting score
+
+
+class ModelEvaluationConfig:
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.change_threshold = 0.01
+
+
+class ModelPusherConfig:
+
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.model_pusher_dir = os.path.join(training_pipeline_config.artifact_dir , "model_pusher")
+        self.saved_model_dir = os.path.join("saved_models")
+        self.pusher_model_dir = os.path.join(self.model_pusher_dir,"saved_models")
+        self.pusher_model_path = os.path.join(self.pusher_model_dir,MODEL_FILE_NAME)
+        self.pusher_transformer_path = os.path.join(self.pusher_model_dir,TRANSFORMER_OBJECT_FILE_NAME)
+        self.pusher_target_encoder_path = os.path.join(self.pusher_model_dir,TARGET_ENCODER_OBJECT_FILE_NAME)
