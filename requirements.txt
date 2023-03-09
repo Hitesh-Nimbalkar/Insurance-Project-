@@ -16,4 +16,7 @@ scikit-learn
 apache-airflow
 pandas
 pymongo
+streamlit
+matplotlib
+seaborn
 -e .
